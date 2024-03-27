@@ -18,7 +18,7 @@ export default function App({ Component, url }: PageProps) {
         <title>Fresh Mind - {pathname}</title>
         <link rel="stylesheet" href="/styles.css" />
       </head>
-      <body class="antialiased">
+      <body f-client-nav class="antialiased">
         <Partial name="body">
           <Component />
         </Partial>
