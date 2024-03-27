@@ -9,10 +9,7 @@ const links = [
 
 export function Navigation() {
   return (
-    <header
-      class="grid grid-flow-col items-center justify-between bg-zinc-900 p-4 sm:justify-between"
-      f-client-nav={false}
-    >
+    <header class="grid grid-flow-col items-center justify-between bg-zinc-900 p-4 sm:justify-between">
       <div class="flex flex-col items-center text-white sm:flex-row">
         <a href="/">
           <img src="/logo.svg" class="h-16 w-16" alt="Jack's Logo" />
@@ -24,7 +21,7 @@ export function Navigation() {
         f-client-nav={true}
       >
         {links.map((link) => (
-          <a class="py-2 hover:text-orange-300 sm:px-6" href={link.url}>
+          <a class="py-2 hover:text-orange-400 sm:px-6" href={link.url}>
             {link.name}
           </a>
         ))}

@@ -10,8 +10,8 @@ const links = [
 export function MobileMenu() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
-    <div class="fixed right-0 z-10 rounded-md bg-zinc-900 text-right shadow-lg sm:hidden">
-      <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} class="px-4">
+    <div class="fixed right-5 z-10 text-right sm:hidden">
+      <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
         <svg
           class="h-10 w-10"
           fill="none"
@@ -19,27 +19,35 @@ export function MobileMenu() {
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {mobileMenuOpen ? (
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"
-            ></path>
-          ) : (
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            ></path>
-          )}
+          {mobileMenuOpen
+            ? (
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              >
+              </path>
+            )
+            : (
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              >
+              </path>
+            )}
         </svg>
       </button>
       {mobileMenuOpen && (
-        <nav class="fixed right-2 flex flex-col rounded-md bg-zinc-900 text-left text-white ring-1 ring-orange-400">
+        <nav class="fixed right-2 flex flex-col rounded-md bg-zinc-900 text-left text-white ring-1 ring-orange-400 shadow-lg">
           {links.map((link) => (
-            <a key={link.name} href={link.url} class="p-4 text-base font-bold">
+            <a
+              key={link.name}
+              href={link.url}
+              class="p-2 m-2 text-base font-bold hover:text-orange-400"
+            >
               {link.name}
             </a>
           ))}
