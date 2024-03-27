@@ -8,6 +8,7 @@ import * as $_layout from "./routes/_layout.tsx";
 import * as $blog_name_ from "./routes/blog/[name].tsx";
 import * as $index from "./routes/index.tsx";
 import * as $Counter from "./islands/Counter.tsx";
+import * as $MobileMenu from "./islands/MobileMenu.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -20,6 +21,7 @@ const manifest = {
   },
   islands: {
     "./islands/Counter.tsx": $Counter,
+    "./islands/MobileMenu.tsx": $MobileMenu,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;
