@@ -11,12 +11,9 @@ export function Footer() {
         <img src="/logo.svg" class="h-24 w-24" alt="Jack's Logo" />
       </a>
       <div class="flex flex-col sm:flex-row sm:justify-between">
-        <div class="grid grid-cols-2 items-center text-left text-base font-medium text-white sm:grid-flow-col sm:grid-rows-1 w-max">
+        <div class="grid w-max grid-cols-2 items-center text-left text-base font-medium text-white sm:grid-flow-col sm:grid-rows-1">
           {links.map((link) => (
-            <a
-              href={link.href}
-              class="hover:text-orange-400 sm:px-4 px-4 py-2"
-            >
+            <a href={link.href} class="px-4 py-2 hover:text-orange-400 sm:px-4">
               {link.name}
             </a>
           ))}
@@ -37,10 +34,7 @@ export function Footer() {
           </a>
         </div>
       </div>
-      <div
-        class="flex text-left sm:w-fit"
-        aria-hidden="true"
-      >
+      <div class="flex text-left sm:w-fit" aria-hidden="true">
         <p class="my-auto text-xs text-gray-400" aria-hidden="true">
           Jack Valley © 2024
         </p>
