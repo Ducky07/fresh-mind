@@ -1,14 +1,15 @@
 name: Deploy
 on:
-  push:
-    branches: main
-  pull_request:
-    branches: main
+  workflow_run:
+    workflows: [Format, Build]
+    types: [completed]
+    branches: [main, feature/*]
 
 jobs:
-  deploy:
+  on-success:
     name: Deploy
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     permissions:
       id-token: write # Needed for auth with Deno Deploy
@@ -29,6 +30,6 @@ jobs:
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "fresh-mind"
+          project: "jackv"
           entrypoint: "main.ts"
           root: "."

@@ -11,7 +11,10 @@ export function MobileMenu() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <div class="fixed right-5 z-10 text-right sm:hidden">
-      <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+      <button
+        name="navigation"
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+      >
         <svg
           class="h-10 w-10"
           fill="none"
@@ -19,21 +22,25 @@ export function MobileMenu() {
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {mobileMenuOpen ? (
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"
-            ></path>
-          ) : (
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            ></path>
-          )}
+          {mobileMenuOpen
+            ? (
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              >
+              </path>
+            )
+            : (
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              >
+              </path>
+            )}
         </svg>
       </button>
       {mobileMenuOpen && (

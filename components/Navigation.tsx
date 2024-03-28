@@ -14,14 +14,17 @@ export function Navigation() {
         <a href="/">
           <img src="/logo.svg" class="h-16 w-16" alt="Jack's Logo" />
         </a>
-        <p class="font-bold sm:ml-4 sm:text-2xl">Jack's Blog</p>
+        <p class="font-bold sm:ml-4 sm:text-2xl">Jack's Universe</p>
       </div>
       <nav
-        class="hidden grid-cols-2 items-center text-left text-base font-medium text-white sm:grid sm:grid-flow-col sm:grid-rows-1"
+        class="prose prose-invert hidden grid-cols-2 items-center font-medium text-white md:prose-lg sm:grid sm:grid-flow-col sm:grid-rows-1"
         f-client-nav={true}
       >
         {links.map((link) => (
-          <a class="py-2 hover:text-orange-400 sm:px-6" href={link.url}>
+          <a
+            class="px-4 no-underline hover:text-orange-400 md:px-6"
+            href={link.url}
+          >
             {link.name}
           </a>
         ))}
