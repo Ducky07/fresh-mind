@@ -2,6 +2,11 @@ name: Format
 on:
   pull_request:
     types: [opened, reopened, synchronize]
+    branches-ignore:
+      - main
+  push:
+    branches:
+      - main
 
 jobs:
   format:
