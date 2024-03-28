@@ -1,12 +1,12 @@
-name: Format
+name: Build
 on:
   pull_request:
     opened:
     reopened:
 
 jobs:
-  format:
-    name: Format
+  build:
+    name: Build
     runs-on: ubuntu-latest
 
     steps:
@@ -18,5 +18,5 @@ jobs:
         with:
           deno-version: v1.x
 
-      - name: Check format
-        run: "deno fmt --check"
+      - name: Check build
+        run: "deno task build"
