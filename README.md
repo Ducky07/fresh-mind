@@ -1,4 +1,5 @@
 # Fresh project
+[![Deploy](https://github.com/Ducky07/fresh-mind/actions/workflows/deploy.yml/badge.svg)](https://github.com/Ducky07/fresh-mind/actions/workflows/deploy.yml)
 
 Your new Fresh project is ready to go. You can follow the Fresh "Getting
 Started" guide here: https://fresh.deno.dev/docs/getting-started
