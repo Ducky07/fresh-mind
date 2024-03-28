@@ -14,10 +14,10 @@ export function Navigation() {
         <a href="/">
           <img src="/logo.svg" class="h-16 w-16" alt="Jack's Logo" />
         </a>
-        <p class="font-bold sm:ml-4 sm:text-2xl">Jack's Blog</p>
+        <p class="font-bold sm:ml-4 sm:text-2xl">Jack's Universe</p>
       </div>
       <nav
-        class="hidden grid-cols-2 items-center text-left text-base font-medium text-white sm:grid sm:grid-flow-col sm:grid-rows-1"
+        class="hidden grid-cols-2 items-center font-medium text-white sm:grid sm:grid-flow-col sm:grid-rows-1"
         f-client-nav={true}
       >
         {links.map((link) => (

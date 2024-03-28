@@ -2,10 +2,9 @@ import { type PageProps } from "$fresh/server.ts";
 import { Partial } from "$fresh/runtime.ts";
 
 export default function App({ Component, url }: PageProps) {
-  const pathname =
-    url.pathname === "/"
-      ? "Home"
-      : url.pathname.slice(1).charAt(0).toUpperCase() + url.pathname.slice(2);
+  const pathname = url.pathname === "/"
+    ? "Home"
+    : url.pathname.slice(1).charAt(0).toUpperCase() + url.pathname.slice(2);
   return (
     <html lang="en">
       <head>
