@@ -3,9 +3,12 @@ on:
   workflow_run:
     workflows: [Format, Build]
     types: [completed]
-    branches: [main]
     pull_request:
-      branches: main
+      branches:
+        - main
+  push:
+    branches:
+      - main
 
 jobs:
   on-success:
