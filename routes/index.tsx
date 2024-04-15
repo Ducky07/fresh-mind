@@ -9,7 +9,10 @@ export default function Home() {
           height="128"
           alt="Jack's universe logo"
         />
-        <h1 class="font-semibold">Welcome to my Universe</h1>
+        <h1
+          class="font-semibold">
+        Welcome to my demonstration
+        </h1>
       </div>
     </main>
   );
